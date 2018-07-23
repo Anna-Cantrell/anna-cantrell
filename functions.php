@@ -6,7 +6,7 @@
  * theme functionality.
  *
  * @package WordPress
- * @subpackage Brisk
+ * @subpackage Anna Cantrell
  * @since Brisk 1.0
  */
 
