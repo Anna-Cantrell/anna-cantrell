@@ -1,0 +1,22 @@
+/*
+ * About section Styles
+ *
+ * This document contains all of the styles for the about section.
+ *
+ */
+
+#about {
+  padding-top: 100px;
+  margin-bottom: 75px;
+  h2 {
+    @apply --fancy-bold;
+    color: var(--white);
+  }
+  p {
+    color: var(--white);
+
+    .about-sub-head {
+      font-weight: 500;
+    }
+  }
+}

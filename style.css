@@ -7,6 +7,12 @@ Version: 1.0.0
 GitHub Theme URI: anna-cantrell/anna-cantrell
 */
 
+@import 'imports/base/root.css';
 @import 'imports/base/layout.css';
+@import 'imports/base/page.css';
 
 @import 'imports/components/main-menu.css';
+@import 'imports/components/header.css';
+@import 'imports/components/about.css';
+@import 'imports/components/contact.css';
+@import 'imports/components/geometry.css';

@@ -1,0 +1,489 @@
+/*
+ * Page Styles
+ *
+ * This document contains all of the styles for the basic page.
+ *
+ */
+
+/*  Wrappers */
+body {
+  margin: 0;
+  font-size: 14px;
+  background-color: var(--background-color);
+  font-family: "proxima-nova", sans-serif;
+  font-weight: 100;
+  transition: all .3s;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+a:focus {
+  text-decoration: none;
+}
+
+#work-section {
+  width: 100%;
+  padding: 100px 0 0 0;
+
+    & .work-section-container {
+      position: relative;
+
+      & .work-col {
+        height: 200px;
+        padding: 5px;
+        transition: all .3s;
+        overflow: hidden;
+
+        &.work-open {
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          z-index: 1;
+
+          &.thnc {
+            height: 120%;
+          }
+
+          & a {
+            color: var(--pink);
+          }
+
+          &.branding {
+            height: 700px;
+
+            h2 {
+              font-size: 1.5em;
+            }
+          }
+
+          & .exit-button {
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            right: 0;
+            top: 0;
+            opacity: .5;
+            z-index: 3;
+
+
+            &:before {
+              content: '';
+              position: absolute;
+              height: 1px;
+              width: 80%;
+              margin-top: 25px;
+              background-color: var(--background-color);
+              transform: rotate(45deg);
+            }
+            &:after {
+              content: '';
+              position: absolute;
+              top: 25px;
+              height: 1px;
+              width: 80%;
+              background-color: var(--background-color);
+              transform: rotate(135deg);
+            }
+
+            &:hover {
+              cursor: pointer;
+            }
+          }
+
+          & img {
+            display: none;
+          }
+          & .work:hover {
+            transform: translateY(0px);
+            box-shadow: 0px 0px;
+          }
+        }
+
+          & .work {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background: url('../img/workBg.png');
+            overflow: hidden;
+            transition: all .3s;
+            padding-top: 40px;
+            box-shadow: var(--depth1);
+
+            &:hover {
+              transform: translateY(-5px) translateX(-2px);
+              box-shadow: var(--depth2-pink);
+
+              & img {
+                filter: grayscale(0%);
+              }
+            }
+
+            & img {
+              margin-top: -40px;
+              width: 101%;
+              filter: grayscale(100%);
+              transition: all .3s;
+
+                &.tn1 {
+                  margin-top: -60px;
+                }
+                &.tn2 {
+                  margin-top: -40px;
+                }
+                &.tn3 {
+                  margin-top: -50px;
+                }
+                &.tn4 {
+                  margin-top: -40px;
+                  width: 150%;
+                  margin-left: 0%;
+                }
+                &.tn5 {
+                  margin-top: -40px;
+                  width: 150%;
+                  margin-left: -28%;
+                }
+                &.tn6 {
+                  margin-top: -45px;
+                }
+                &.tn8 {
+                  margin-top: -41px;
+                  width: 110%;
+                  margin-left: -5%;
+                }
+            }
+
+            & .img_main, .img_main-game {
+              position: relative;
+              height: 320px;
+              width: 100%;
+
+                &.work1-1 {
+                  background: url('../img/thnc_main.png');
+                  @include work-img;
+                }
+                &.work1-2 {
+                  background: url('../img/thnc_joint_sub.png');
+                  @include work-img;
+                }
+
+                &.work2-1 {
+                  background: url('../img/crisp_main.png');
+                  @include work-img;
+                }
+                &.work2-2 {
+                  background: url('../img/crisp_joint_sub.png');
+                  @include work-img;
+                }
+
+                &.work3-1 {
+                  background: url('../img/queue_main.png');
+                  @include work-img;
+                }
+                &.work3-2 {
+                  background: url('../img/queue_joint_sub.png');
+                  @include work-img;
+                }
+
+                &.work4-1 {
+                  background: url('../img/smith_main.png');
+                  @include work-img;
+                }
+                &.work4-2 {
+                  background: url('../img/smith_joint_sub.png');
+                  @include work-img;
+                }
+
+                &.work5-1 {
+                  background: url('../img/MLewis_main.png');
+                  @include work-img;
+                }
+                &.work5-2 {
+                  background: url('../img/MLewis_joint_sub.png');
+                  @include work-img;
+                }
+
+                &.work6-1 {
+                  background: url('../img/EpicLP_main.png');
+                  @include work-img;
+                }
+                &.work6-2 {
+                  background: url('../img/EpicLP_joint_sub.png');
+                  @include work-img;
+                }
+
+                &.work7-1 {
+                  background: url('../img/main-toward.gif');
+                  @include work-img;
+                }
+                &.work7-2 {
+                  background: url('../img/main-left.gif');
+                  @include work-img;
+                }
+                &.work7-3 {
+                  background: url('../img/sent-toward.gif');
+                  @include work-img;
+                }
+                &.work7-4 {
+                  background: url('../img/ram-left.gif');
+                  @include work-img;
+                }
+                &.work7-5 {
+                  background: url('../img/sent-attack-forward.gif');
+                  @include work-img;
+                }
+                &.work7-6 {
+                  background: url('../img/sent-attack-right.gif');
+                  @include work-img;
+                }
+                &.work7-7 {
+                  background: url('../img/main-attack-forward.gif');
+                  @include work-img;
+                }
+                &.work7-8 {
+                  background: url('../img/main-attack-away.gif');
+                  @include work-img;
+                }
+
+                &.work8-1 {
+                  background: url('../img/cjhps_main.png');
+                  @include work-img;
+                }
+                &.work8-2 {
+                  background: url('../img/cjhps_joint_sub.png');
+                  @include work-img;
+                }
+
+                &.work9-1 {
+                  background: url('../img/branding_joint_sub1.png');
+                  @include work-img;
+                }
+                &.work9-2 {
+                  background: url('../img/branding_joint_sub2.png');
+                  @include work-img;
+                }
+                &.work9-3 {
+                  background: url('../img/branding_joint_sub3.png');
+                  @include work-img;
+                }
+
+            }
+
+            & .img_main-game {
+              height: 160px;
+            }
+
+            & h2 {
+              @include fancy-bold;
+            }
+          }
+      }
+    }
+    .row { margin: 0px;}
+
+}
+
+@media screen and (max-width: 992px) {
+  #work-section {
+    & .work-section-container {
+      & .work-col {
+
+        &.work-open {
+          height: 630px;
+
+          &.branding {
+            height: 780px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #work-section {
+    & .work-section-container {
+      & .work-col {
+        & .work {
+          & img.tn1 {
+            margin-top: -95px;
+          }
+          & img.tn2 {
+            margin-top: -60px;
+          }
+          & img.tn3 {
+            margin-top: -90px;
+          }
+          & img.tn8 {
+            margin-top: -41px;
+            width: 101%;
+            margin-left: 0%;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+@media screen and (max-width: 767px) {
+  #work-section {
+      & .work-section-container {
+      & .work-col {
+        &.work-open {
+          height: 1480px;
+
+          &.branding {
+            height: 2200px;
+          }
+
+          &.thnc {
+            height: 1500px;
+          }
+
+          &.game {
+            height: 900px;
+          }
+        }
+        & .work {
+          &.gamecon {
+            padding-top: 40px;
+          }
+          & .img_main {
+            height: 550px;
+          }
+          & .img_main-game {
+            height: 100px;
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  #work-section {
+
+      & .work-section-container {
+        & .work-col {
+          height: 220px;
+          &.work-open {
+            height: 1250px;
+
+            &.branding {
+              height: 2100px;
+            }
+          }
+            & .work {
+              padding-top: 0px;
+              box-shadow: var(--depth1);
+
+              &:hover {
+                transform: translateY(0px);
+                box-shadow: var(--depth1);
+                & img {
+                  filter: grayscale(0%);
+                }
+              }
+
+              & .img_main {
+                height: 440px;
+              }
+
+              & img {
+                filter: grayscale(0%);
+
+                &.tn3 {
+                  margin-top: -40px;
+                }
+              }
+            }
+        }
+  }
+}
+}
+
+@media screen and (min-width: 1200px) {
+  #work-section {
+    & .work-section-container {
+      & .work-col {
+        height: 235px;
+
+        &.work-open {
+          &.branding {
+            height: 800px;
+          }
+        }
+
+          & .work {
+            & .img_main {
+              height: 480px;
+            }
+            & img {
+                &.tn1 {
+                  margin-top: -115px;
+                }
+                &.tn2 {
+                  margin-top: -70px;
+                }
+                &.tn3 {
+                  margin-top: -100px;
+                }
+                &.tn8 {
+                  margin-top: -41px;
+                }
+            }
+          }
+
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #work-section {
+    & .work-section-container {
+      & .work-col {
+
+        &.work-open {
+          &.branding {
+            height: 2200px;
+          }
+        }
+
+          & .work {
+            & img {
+              &.tn1 {
+                margin-top: -30px;
+              }
+              &.tn2 {
+                margin-top: -30px;
+              }
+              &.tn3 {
+                margin-top: -30px;
+              }
+              &.tn5 {
+                margin-top: -30px;
+              }
+              &.tn6 {
+                margin-top: -30px;
+              }
+              &.tn8 {
+                margin-top: -20px;
+              }
+            }
+          }
+
+      }
+    }
+  }
+}

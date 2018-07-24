@@ -1,0 +1,79 @@
+/*
+*
+*
+* Styles for the navigation and header portion
+*
+*
+*/
+
+
+.title-container {
+  position: relative;
+  @apply --clearfix;
+  text-align: center;
+  color: var(--white);
+
+  & h1 {
+    position: relative;
+    @apply --fancy-bold;
+    font-size: 5em;
+    text-shadow: 0px 0px 20px rgba(0,0,0,0.8);
+    transition: font-size .3s;
+  }
+  & p {
+    font-family: 'proxima-nova';
+    font-weight: 100;
+    font-size: 1.6em;
+    letter-spacing: 1.8px;
+    margin-top: -13px;
+  }
+}
+
+.nav-hr {
+  height: 1px;
+  width: 60%;
+  margin: 5px auto;
+  background-color: var(--white);
+  transition: width .3s;
+}
+
+#header {
+  position: fixed;
+  margin-top: 150px;
+  @apply --absolute-center;
+  z-index: 2;
+  transition: background .3s;
+
+  & ul {
+    list-style: none;
+    color: var(--white);
+    text-align: center;
+    -webkit-padding-start: 0px;
+    text-shadow: 0px 0px 20px rgba(0,0,0,0.8);
+
+      & li {
+        display: inline-block;
+        text-transform: uppercase;
+        margin: 10px 16px;
+        letter-spacing: 1.5px;
+        font-size: 1.15em;
+        transition: all .3s;
+        color: var(--white);
+
+        & a:visited {
+          color: var(--white);
+          text-decoration: none;
+        }
+        & a:focus {
+          color: var(--white);
+          text-decoration: none;
+        }
+        & a:hover {
+          text-decoration: none;
+          color: rgba(253,101,188,1);
+          cursor: pointer;
+          font-weight: 500;
+        }
+      }
+  }
+}
