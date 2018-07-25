@@ -103,3 +103,18 @@ $page
 add_action('acf/init', function() use ($page) {
 	acf_add_local_field_group($page->build());
 });
+
+
+//
+// Options Page
+//
+
+$options = new StoutLogic\AcfBuilder\FieldsBuilder('options');
+$options
+		->addImage('wordpress_icon', ['wrapper'=>['width'=>50]])
+    ->addImage('react_icon', ['wrapper'=>['width'=>50]])
+    ->setLocation('options_page', '==', 'acf-options-theme-settings');
+
+add_action('acf/init', function() use ($options) {
+   acf_add_local_field_group($options->build());
+});

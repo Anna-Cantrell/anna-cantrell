@@ -20,7 +20,7 @@
 }
 #header ul{list-style:none;color:#e6e6e6;text-align:center;-webkit-padding-start:0;margin-top:8px}
 #header ul li{display:inline-block;text-transform:uppercase;margin:10px 16px;letter-spacing:1.5px;font-size:1.15em;color:#e6e6e6}
-#hero .geometry-container,#hero .geometry-container .par-container,#hero .geometry-container .rhom-container,#hero .geometry-container .rhom-container .geo-rhom-inner{margin-right:auto;margin-left:auto;left:0;right:0}
+#hero .geometry-container,#hero .geometry-container .par-container,#hero .geometry-container .rhom-container,#hero .geometry-container .rhom-container .geo-rhom-inner{margin-right:auto;margin-left:auto;right:0;left:0}
 #header ul li a{transition:all .2s}
 #header ul li a:focus,#header ul li a:visited{color:#e6e6e6;text-decoration:none}
 #header ul li a:hover{text-decoration:none;color:#fd65bc;cursor:pointer}
@@ -29,7 +29,7 @@
 #header.page .title-container h1{font-size:2.5em;text-shadow:none;margin-top:24px;margin-bottom:5px}
 #header.page .title-container p{font-size:.8em}
 #header.page .nav-hr,#header.page ul{display:none}
-#hero{height:100vh;min-height:500px;max-height:650px;background:#202020;padding-top:1px}
+#hero{height:100vh;min-height:500px;max-height:650px;padding-top:1px}
 #hero .geometry-container .par-container{position:absolute;width:50vw;height:30.46458vw;margin-top:100px}
 #hero .geometry-container .par-container .geo-par-1,#hero .geometry-container .par-container .geo-par-2{height:5.30188vw;width:14.77105vw;background-color:rgba(200,200,200,.3);transform:skew(-48deg);margin-top:5.26458vw}
 #hero .geometry-container .par-container .geo-par-1:nth-child(2),#hero .geometry-container .par-container .geo-par-2:nth-child(2){float:right;margin-top:9.46458vw}
@@ -62,7 +62,7 @@ a,a:visited{color:inherit;text-decoration:none}
 *{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 body{margin:0;font-size:14px}
 #about h2,#contact h2{font-family:"playfair display",serif;font-style:italic}
-body.home{background-color:#292929}
+body.home{background:#202020}
 a:focus{text-decoration:none}
 .container,.content,img{max-width:100%}
 #about{padding-top:100px;margin-bottom:75px}
@@ -72,5 +72,10 @@ a:focus{text-decoration:none}
 #contact h2{font-weight:700}
 #contact p .about-sub-head{font-weight:500}
 .section--grid .post-grid{width:100%;display:flex;flex-wrap:wrap}
-.section--grid .post-grid__single{flex:1;min-width:320px;height:200px;overflow:hidden}
+.section--grid .post-grid__single{position:relative;flex:1;min-width:320px;height:200px;overflow:hidden}
 .section--grid .post-grid__single img{min-width:100%;min-height:100%;height:auto}
+.icon-container{position:absolute;bottom:0;right:0}
+.icon-container .icon{height:auto;width:35px;padding:5px 10px}
+.icon-container .icon img{width:100%;height:auto}
+.tag-container{position:absolute;top:20px;left:0;padding:4px 4px 4px 10px;background:#59e7ff}
+.tag-container p{margin:0}

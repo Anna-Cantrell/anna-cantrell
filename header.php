@@ -34,7 +34,7 @@
         <div class="container">
 
           <div id="titleContainer" class="title-container">
-            <h1 id="name">Anna Cantrell</h1>
+            <h1 id="name"><a href="<?php echo get_site_url(); ?>">Anna Cantrell</a></h1>
             <p id="tagline">design + develop + experience</p>
           </div>
 

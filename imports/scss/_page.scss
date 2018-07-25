@@ -18,7 +18,7 @@ body {
   font-weight: 100;
   transition: all .3s;
   &.home {
-    background-color: $background-color;
+    background: $hero-background;
   }
 }
 
