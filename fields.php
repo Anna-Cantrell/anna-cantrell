@@ -35,6 +35,12 @@ $image = new FieldsBuilder('image');
 $image
 	->addImage('image');
 
+// Post Grid
+$postGrid = new FieldsBuilder('post_grid');
+$postGrid
+	->addRepeater('title')
+	->addPageLink('page_link');
+
 // Title
 $title = new FieldsBuilder('title');
 $title
@@ -60,6 +66,10 @@ $sections
 		->addLayout('image')
 			->addTab('Content')
 			->addFields($image)
+			->addFields($section_options)
+		->addLayout('post_grid')
+			->addTab('Content')
+			->addFields($postGrid)
 			->addFields($section_options)
 		->addLayout('title')
 			->addTab('Content')

@@ -1,0 +1,18 @@
+.section--grid {
+  .post-grid {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .post-grid__single {
+    flex: 1;
+    min-width: 320px;
+    height: 200px;
+    overflow: hidden;
+    img {
+      min-width: 100%;
+      min-height: 100%;
+      height: auto;
+    }
+  }
+}

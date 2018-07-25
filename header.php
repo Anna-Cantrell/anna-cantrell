@@ -18,9 +18,18 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<?php wp_head(); ?>
 </head>
-<body <?php body_class(); ?>>
 
-	<section id="header">
+<?php
+	$headerClass = "page";
+	if ( is_front_page() ) :
+			$headerClass = "home";
+	endif;
+?>
+
+<body <?php body_class(); ?> class="<?php echo $headerClass ?>">
+
+
+	<section id="header" class="<?php echo $headerClass ?>">
       <div class="wrapper">
         <div class="container">
 
@@ -43,7 +52,7 @@
     </section>
 
 
-    <section id="hero">
+    <section id="hero" class="<?php echo $headerClass ?>">
       <div class=" wrapper">
         <div class="container">
 

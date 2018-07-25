@@ -1,10 +1,14 @@
-// Variables
-@import "variables";
-@import "mixins";
+// Global
+@import "global/variables";
+@import "global/mixins";
+@import "global/layout";
 
 // Components
-@import "header";
-@import "geometry";
+@import "header/header";
+@import "header/geometry";
 @import "page";
 @import "about";
 @import "contact";
+
+// Sections
+@import "sections/post-grid";
