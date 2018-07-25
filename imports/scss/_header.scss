@@ -9,21 +9,24 @@
 
 .title-container {
   position: relative;
-  @apply --clearfix;
+  @include clearfix;
   text-align: center;
-  color: var(--white);
+  color: $white;
 
   & h1 {
     position: relative;
-    @apply --fancy-bold;
+    @include fancy-bold;
     font-size: 5em;
     text-shadow: 0px 0px 20px rgba(0,0,0,0.8);
     transition: font-size .3s;
+    margin-bottom: 0px;
   }
   & p {
-    font-family: 'proxima-nova';
-    font-weight: 100;
-    font-size: 1.6em;
+    font: {
+      family: $bodyFont;
+      weight: 100;
+      size: 1.6em;
+    }
     letter-spacing: 1.8px;
     margin-top: -13px;
   }
@@ -33,20 +36,20 @@
   height: 1px;
   width: 60%;
   margin: 5px auto;
-  background-color: var(--white);
+  background-color: $white;
   transition: width .3s;
 }
 
 #header {
   position: fixed;
   margin-top: 150px;
-  @apply --absolute-center;
+  @include absolute-center;
   z-index: 2;
   transition: background .3s;
 
   & ul {
     list-style: none;
-    color: var(--white);
+    color: $white;
     text-align: center;
     -webkit-padding-start: 0px;
     text-shadow: 0px 0px 20px rgba(0,0,0,0.8);
@@ -58,14 +61,14 @@
         letter-spacing: 1.5px;
         font-size: 1.15em;
         transition: all .3s;
-        color: var(--white);
+        color: $white;
 
         & a:visited {
-          color: var(--white);
+          color: $white;
           text-decoration: none;
         }
         & a:focus {
-          color: var(--white);
+          color: $white;
           text-decoration: none;
         }
         & a:hover {

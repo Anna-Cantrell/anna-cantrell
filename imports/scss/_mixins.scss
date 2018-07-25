@@ -1,0 +1,36 @@
+/*
+ * Sass Mixins
+ *
+ * This document contains a collection of useful Sass mixins. This allows the
+ * use of reuseable groups of styles for items such as vendor prefixes.
+ */
+
+// Clearfix Tool
+@mixin clearfix {
+  &:after {
+    clear: both;
+    content: '';
+    display: table;
+  }
+}
+
+@mixin work-img {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@mixin fancy-bold {
+  font: {
+    family: $displayFont;
+    weight: 700;
+    style: italic;
+  }
+}
+
+@mixin absolute-center {
+  margin-right: auto;
+  margin-left: auto;
+  left: 0;
+  right: 0;
+}

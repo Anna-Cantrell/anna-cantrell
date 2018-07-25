@@ -1,0 +1,41 @@
+/*
+ * Sass Variables
+ *
+ * This document contains a collection of Sass variables for the website. This
+ * allows the use of reuseable values such as colors and fonts.
+ */
+
+// colors
+$background-color: #292929;
+$hero-background: #202020;
+$white: rgb(230,230,230);
+$pink: rgba(253,101,188,1);
+$purple: rgba(225,152,253,1);
+$blue: rgba(89,231,255,1);
+
+//geometry
+$rhom-width: 40vw;
+$rhom-height: $rhom-width / 1.313;
+$par-width: $rhom-width / 2.708;
+$par-height: $par-width / 2.786;
+$rhom-border-size: $rhom-width / 21;
+
+$lg-rhom-width: 450px;
+$lg-rhom-height: $lg-rhom-width / 1.313;
+$lg-par-width: $lg-rhom-width / 2.708;
+$lg-par-height: $lg-par-width / 2.786;
+$lg-rhom-border-size: $lg-rhom-width / 21;
+
+//shadow
+$depth0: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+$depth1: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+$depth2: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+$depth3: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+$depth4: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+
+$depth2-pink: 3px 5px 0px rgba(89,231,255,1), 6px 10px 0px rgba(253,101,188,1);
+
+//typography
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700i');
+$displayFont: "playfair display", serif;
+$bodyFont: "avenir", sans-serif;

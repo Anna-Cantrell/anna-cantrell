@@ -10,28 +10,38 @@
 #hero {
   height: 100vh;
   max-height: 700px;
-  background: var(--hero-background);
+  background: $hero-background;
 
   & .geometry-container {
-    @apply --absolute-center;
+    @include absolute-center;
 
     & .par-container {
       position: absolute;
-      width: var(--rhom-width) + 10;
-      height: var(--rhom-height);
-      @apply --absolute-center;
+      width: $rhom-width + 10;
+      height: $rhom-height;
+      @include absolute-center;
       margin-top: 100px;
 
       & .geo-par-1, .geo-par-2 {
-        height: var(--par-height);
-        width: var(--par-width);
+        height: $par-height;
+        width: $par-width;
         background-color: rgba(200,200,200,0.3);
         transform: skew(-48deg);
-        margin-top: var(--rhom-height) - 25.2;
+        margin-top: $rhom-height - 25.2;
+
+        // &.pink {
+        //   background: linear-gradient(120deg, rgba(253,101,188,1), 30%, rgba(253,101,188,0.0));
+        // }
+        // &.blue {
+        //   background: linear-gradient(120deg, rgba(89,231,255,1), 30%, rgba(89,231,255,0.0));
+        // }
+        // &.purple {
+        //   background: linear-gradient(120deg, rgba(225,152,253,1), 30%, rgba(225,152,253,0.0));
+        // }
 
         &:nth-child(2){
           float: right;
-          margin-top: var(--rhom-height) - 21;
+          margin-top: $rhom-height - 21;
         }
       }
     }
@@ -40,29 +50,40 @@
       position: absolute;
       display: inline-block;
       margin-top: 100px;
-      @apply --absolute-center;
-      height: var(--rhom-height);
-      width: var(--rhom-width);
+      @include absolute-center;
+      height: $rhom-height;
+      width: $rhom-width;
       vertical-align: middle;
       transform: translateX(0) translateY(0);
+      // transition: all .3s;
 
       & .geo-rhom-outer {
         position: absolute;
-        @apply --absolute-center;
+        @include absolute-center;
         transform: rotate(-25deg) skew(40.28deg);
         background: linear-gradient(120deg, rgba(90,90,90,1), 30%, rgba(255,255,255,0.0));
         height: 100%;
         width: 100%;
+
+          // &.pink {
+          //   background: linear-gradient(120deg, rgba(253,101,188,1), 30%, rgba(253,101,188,0.0));
+          // }
+          // &.blue {
+          //   background: linear-gradient(120deg, rgba(89,231,255,1), 30%, rgba(89,231,255,0.0));
+          // }
+          // &.purple {
+          //   background: linear-gradient(120deg, rgba(225,152,253,1), 30%, rgba(225,152,253,0.0));
+          // }
       }
 
       & .geo-rhom-inner {
         position: absolute;
-        @apply --absolute-center;
-        height: var(--rhom-height) - 4;
-        width: var(--rhom-width) - 5;
+        @include absolute-center;
+        height: $rhom-height - 4;
+        width: $rhom-width - 5;
         transform: rotate(-25deg) skew(40.28deg);
-        background: var(--hero-background);
-        margin-top: var(--rhom-border-size);
+        background: $hero-background;
+        margin-top: $rhom-border-size;
       }
     }
   }
@@ -81,28 +102,28 @@
 
     & .geometry-container {
       & .par-container {
-        width: var(--lg-rhom-width) + 105;
-        height: var(--lg-rhom-height);
+        width: $lg-rhom-width + 105;
+        height: $lg-rhom-height;
 
         & .geo-par-1, .geo-par-2 {
-          height: var(--lg-par-height);
-          width: var(--lg-par-width);
-          margin-top: var(--lg-rhom-height) - 290;
+          height: $lg-par-height;
+          width: $lg-par-width;
+          margin-top: $lg-rhom-height - 290;
 
           &:nth-child(2){
-            margin-top: var(--lg-rhom-height) - 225;
+            margin-top: $lg-rhom-height - 225;
           }
         }
       }
 
       & .rhom-container {
-        height: var(--lg-rhom-height);
-        width: var(--lg-rhom-width);
+        height: $lg-rhom-height;
+        width: $lg-rhom-width;
 
         & .geo-rhom-inner {
-          height: var(--lg-rhom-height) - 45;
-          width: var(--lg-rhom-width) - 62;
-          margin-top: var(--lg-rhom-border-size);
+          height: $lg-rhom-height - 45;
+          width: $lg-rhom-width - 62;
+          margin-top: $lg-rhom-border-size;
         }
       }
     }

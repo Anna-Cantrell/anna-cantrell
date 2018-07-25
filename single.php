@@ -1,13 +1,13 @@
 <?php
 /**
- * Singular Template
+ * Single Template
  *
- * This file is the single post template for the WordPress theme. It displays 
+ * This file is the single post template for the WordPress theme. It displays
  * the main content area of individual types (posts, pages, etc).
  *
  * @package WordPress
- * @subpackage Brisk
- * @since Brisk 1.0
+ * @subpackage Anna Cantrell
+ * @since Anna Cantrell 1.0
  */
 
 get_header(); ?>

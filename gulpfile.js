@@ -1,25 +1,20 @@
 // Require packages
 var gulp = require('gulp');
-var postcss = require('gulp-postcss');
-var cssnext = require('postcss-cssnext');
+var sass = require('gulp-sass');
 var minify = require('gulp-minify-css');
 var babelMinify = require('gulp-babel-minify');
 var rename = require('gulp-rename');
 var livereload = require('gulp-livereload');
-var atImport = require("postcss-import")
+
 
 // Do CSS things
-gulp.task('css', function() {
-	var plugins = [
-		atImport(),
-		cssnext()
-	];
-	return gulp.src('./style.css')
-		.pipe(postcss(plugins))
+gulp.task('styles', function(){
+  return gulp.src('./imports/scss/main.scss')
+    .pipe(sass().on('error', sass.logError))
 		.pipe(minify({ keepBreaks: true }))
 		.pipe(rename({ suffix: '.min' }))
 		.pipe(gulp.dest('./'))
-		.pipe(livereload());
+    .pipe(livereload())
 });
 
 // Do JS things
@@ -34,7 +29,7 @@ gulp.task('js', function() {
 // Watch things
 gulp.task('watch', function() {
 	livereload.listen();
-	gulp.watch(['./style.css', './functions.js', './imports/**/*.css'], gulp.parallel('css', 'js'));
+	gulp.watch(['./style.css', './functions.js', './imports/**/*.scss'], gulp.parallel('styles', 'js'));
 });
 
-gulp.task('default', gulp.series(gulp.parallel('css', 'js'), 'watch'));
+gulp.task('default', gulp.series(gulp.parallel('styles', 'js'), 'watch'));

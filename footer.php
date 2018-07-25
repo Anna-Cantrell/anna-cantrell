@@ -6,8 +6,8 @@
  * bottom part of the HTML document.
  *
  * @package WordPress
- * @subpackage Brisk
- * @since Brisk 1.0
+ * @subpackage Anna Cantrell
+ * @since Anna Cantrell 1.0
  */
 
 ?>

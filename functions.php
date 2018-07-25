@@ -16,18 +16,24 @@
  * The code below registers custom WordPress styles using wp_register_style()
  * function.
  *
- * @since anna 1.0
+ * @since Anna Cantrell 1.0
  */
 
+
+// Load Styles
 function anna_styles() {
 	// Load main stylesheet
-	wp_enqueue_style('anna-style', get_template_directory_uri() . '/style.min.css');
-
-	// Load main javascript
-	wp_enqueue_script('anna-script', get_template_directory_uri() . '/functions.min.js', array('jquery'), '1.0', true);
+	wp_enqueue_style('anna-style', get_template_directory_uri() . '/main.min.css');
 }
-
 add_action('wp_enqueue_scripts', 'anna_styles');
+
+
+// Load Scripts
+function anna_scripts() {
+	wp_enqueue_script( 'anna-script', get_template_directory_uri() . '/functions.min.js', array( 'jquery' ));
+}
+add_action('wp_enqueue_scripts', 'anna_scripts');
+
 
 // Move jQuery to footer
 function anna_jquery_footer() {

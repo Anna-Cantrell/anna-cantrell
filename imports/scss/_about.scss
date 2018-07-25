@@ -9,11 +9,11 @@
   padding-top: 100px;
   margin-bottom: 75px;
   h2 {
-    @apply --fancy-bold;
-    color: var(--white);
+    @include fancy-bold;
+    color: $white;
   }
   p {
-    color: var(--white);
+    color: $white;
 
     .about-sub-head {
       font-weight: 500;

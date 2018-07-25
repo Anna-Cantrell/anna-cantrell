@@ -1,9 +1,9 @@
 <?php
 /**
- * Main Template
+ * Template Name: Front Page Template
  *
- * This file is the main template for the WordPress theme. It displays a list of
- * posts in the main content area.
+ * This file is the page template for the WordPress theme. It displays the
+ * main content area of individual pages.
  *
  * @package WordPress
  * @subpackage Anna Cantrell
@@ -15,9 +15,10 @@ get_header(); ?>
 <?php if ( have_posts() ) : ?>
 	<main class="content">
 		<?php while ( have_posts() ) : the_post(); ?>
-			<?php get_template_part( 'content', get_post_format() ); ?>
+			<article>
+				<?php get_template_part('flexible-sections'); ?>
+			</article>
 		<?php endwhile; ?>
-		<?php the_posts_pagination(); ?>
 	</main>
 <?php endif; ?>
 

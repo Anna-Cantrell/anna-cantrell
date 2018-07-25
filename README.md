@@ -1,4 +1,4 @@
-# Brisk
+# Anna Cantrell
 
 This theme uses [PostCSS](https://github.com/postcss/postcss) and [PostCSS-cssnext](http://cssnext.io/).
 

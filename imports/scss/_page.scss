@@ -5,12 +5,12 @@
  *
  */
 
-/*  Wrappers */
+// Wrappers
 body {
   margin: 0;
   font-size: 14px;
-  background-color: var(--background-color);
-  font-family: "proxima-nova", sans-serif;
+  background-color: $background-color;
+  font-family: $bodyFont;
   font-weight: 100;
   transition: all .3s;
 }
@@ -52,7 +52,7 @@ a:focus {
           }
 
           & a {
-            color: var(--pink);
+            color: $pink;
           }
 
           &.branding {
@@ -71,6 +71,7 @@ a:focus {
             top: 0;
             opacity: .5;
             z-index: 3;
+            // background: green;
 
 
             &:before {
@@ -79,7 +80,7 @@ a:focus {
               height: 1px;
               width: 80%;
               margin-top: 25px;
-              background-color: var(--background-color);
+              background-color: $background-color;
               transform: rotate(45deg);
             }
             &:after {
@@ -88,7 +89,7 @@ a:focus {
               top: 25px;
               height: 1px;
               width: 80%;
-              background-color: var(--background-color);
+              background-color: $background-color;
               transform: rotate(135deg);
             }
 
@@ -114,11 +115,11 @@ a:focus {
             overflow: hidden;
             transition: all .3s;
             padding-top: 40px;
-            box-shadow: var(--depth1);
+            box-shadow: $depth1;
 
             &:hover {
               transform: translateY(-5px) translateX(-2px);
-              box-shadow: var(--depth2-pink);
+              box-shadow: $depth2-pink;
 
               & img {
                 filter: grayscale(0%);
@@ -296,7 +297,7 @@ a:focus {
       & .work-col {
 
         &.work-open {
-          height: 630px;
+          height: 630px; //media
 
           &.branding {
             height: 780px;
@@ -339,7 +340,7 @@ a:focus {
       & .work-section-container {
       & .work-col {
         &.work-open {
-          height: 1480px;
+          height: 1480px; //media
 
           &.branding {
             height: 2200px;
@@ -358,7 +359,7 @@ a:focus {
             padding-top: 40px;
           }
           & .img_main {
-            height: 550px;
+            height: 550px; //media
           }
           & .img_main-game {
             height: 100px;
@@ -375,28 +376,29 @@ a:focus {
 
       & .work-section-container {
         & .work-col {
-          height: 220px;
+          height: 220px; //media
           &.work-open {
-            height: 1250px;
+            height: 1250px; //media
+            // background-color: green;
 
             &.branding {
               height: 2100px;
             }
           }
             & .work {
-              padding-top: 0px;
-              box-shadow: var(--depth1);
+              padding-top: 0px; //media
+              box-shadow: $depth1;
 
               &:hover {
-                transform: translateY(0px);
-                box-shadow: var(--depth1);
+                transform: translateY(0px); //media
+                box-shadow: $depth1; //media
                 & img {
                   filter: grayscale(0%);
                 }
               }
 
               & .img_main {
-                height: 440px;
+                height: 440px; //media
               }
 
               & img {
@@ -416,7 +418,7 @@ a:focus {
   #work-section {
     & .work-section-container {
       & .work-col {
-        height: 235px;
+        height: 235px; //media
 
         &.work-open {
           &.branding {
@@ -426,7 +428,7 @@ a:focus {
 
           & .work {
             & .img_main {
-              height: 480px;
+              height: 480px; // media
             }
             & img {
                 &.tn1 {
