@@ -14,10 +14,20 @@ include('variables.php');
 			    setup_postdata( $post ); ?>
 
 					<div class="post-grid__single">
+						<a href="<?php the_permalink(); ?>"></a>
 
 						<?php if( has_tag() ) : ?>
 							<div class="tag-container">
-								<p><?php the_tags(''); ?></p>
+								<p>
+									<?php
+								  $posttags = get_the_tags();
+								  if ($posttags) {
+								    foreach($posttags as $tag) {
+								      echo $tag->name . ' ';
+								    }
+								  }
+								?>
+								</p>
 							</div>
 						<?php endif; ?>
 
@@ -32,12 +42,12 @@ include('variables.php');
 							<div class="icon-container">
 								<?php if ( has_category('react') ) : ?>
 									<div class="icon">
-										<img src="<?php echo $wpIcon['url']; ?>" alt="" />
+										<img src="<?php echo $reactIcon['url']; ?>" alt="" />
 									</div>
 								<?php endif; ?>
 								<?php if ( has_category('wordpress') ) : ?>
 									<div class="icon">
-										<img src="<?php echo $reactIcon['url']; ?>" alt="" />
+										<img src="<?php echo $wpIcon['url']; ?>" alt="" />
 									</div>
 								<?php endif; ?>
 							</div>

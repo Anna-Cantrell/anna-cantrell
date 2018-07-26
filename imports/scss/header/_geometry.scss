@@ -131,39 +131,34 @@
   }
 }
 
-.pink {
-  background: linear-gradient(120deg, rgba(253,101,188,1), 30%, rgba(253,101,188,0.0)) !important;
-  transition: all .3s;
+.geo-rhom-outer, .geo-par-1, .geo-par-2 {
+  &.pink {
+    background: linear-gradient(120deg, rgba(253,101,188,1), 30%, rgba(253,101,188,0.0)) !important;
+    transition: all .3s;
+  }
 }
-.pink-text {
-  color: rgb(253,101,188) !important;
-  transition: all .3s;
+.geo-rhom-outer, .geo-par-1, .geo-par-2 {
+  &.blue {
+    background: linear-gradient(120deg, rgba(89,231,255,1), 30%, rgba(89,231,255,0.0)) !important;
+    transition: all .3s;
+  }
 }
-.blue {
-  background: linear-gradient(120deg, rgba(89,231,255,1), 30%, rgba(89,231,255,0.0)) !important;
-  transition: all .3s;
-}
-.blue-text {
-  color: rgba(89,231,255,1) !important;
-  transition: all .3s;
-}
-.purple {
-  background: linear-gradient(120deg, rgba(225,152,253,1), 30%, rgba(225,152,253,0.0)) !important;
-  transition: all .3s;
-}
-.purple-text {
-  color: rgba(225,152,253,1) !important;
-  transition: all .3s;
+.geo-rhom-outer, .geo-par-1, .geo-par-2 {
+  &.purple {
+    background: linear-gradient(120deg, rgba(225,152,253,1), 30%, rgba(225,152,253,0.0)) !important;
+    transition: all .3s;
+  }
 }
 
 #hero.page {
-  height: auto;
+  height: 200px;
   min-height: 0px;
-  background-color: transparent;
-  height: auto;
   background-color: transparent;
 
   & .geometry-container {
+    @media (max-width: 450px) {
+      margin-top: 0px;
+    }
     & .par-container {
       position: absolute;
       width: $sm-rhom-width + 11;

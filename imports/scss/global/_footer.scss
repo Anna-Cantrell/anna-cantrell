@@ -1,0 +1,46 @@
+footer.home {
+  color: #fff;
+  .prefooter-container {
+    background: $hero-background;
+  }
+}
+
+.prefooter-container {
+  text-align: center;
+  padding: 40px 20px;
+  transition: all .2s;
+  .footer-title {
+    font-size: 22px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    font-weight: 900;
+  }
+  ul {
+    list-style: none;
+    -webkit-padding-start: 0px;
+    margin-bottom: 0px;
+  }
+  li {
+    margin: 5px 0;
+    &:last-child {
+      margin-bottom: 0px;
+    }
+  }
+  &.pink {
+    background-color: $pink;
+  }
+  &.blue {
+    background-color: $blue;
+  }
+  &.purple {
+    background-color: $purple;
+  }
+}
+
+.footer-container {
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  font-size: 12px;
+  background: $background-color;
+}

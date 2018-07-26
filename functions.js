@@ -18,22 +18,18 @@ var click = 0;
 $('#hero, #header').click(function () {
 
   if (click == 0) {
-    $('.geo-rhom-outer, .geo-par-1, .geo-par-2').addClass('pink');
-    $('h2').addClass('pink-text');
+    $('.geo-rhom-outer, .geo-par-1, .geo-par-2, .home--title, .prefooter-container').addClass('pink');
   }
   if (click == 1) {
-    $('.geo-rhom-outer, .geo-par-1, .geo-par-2').removeClass('pink').addClass('blue');
-    $('h2').removeClass('pink-text').addClass('blue-text');
+    $('.geo-rhom-outer, .geo-par-1, .geo-par-2, .home--title, .prefooter-container').removeClass('pink').addClass('blue');
   }
   if (click == 2) {
-    $('.geo-rhom-outer, .geo-par-1, .geo-par-2').removeClass('blue').addClass('purple');
-    $('h2').removeClass('blue-text').addClass('purple-text');
+    $('.geo-rhom-outer, .geo-par-1, .geo-par-2, .home--title, .prefooter-container').removeClass('blue').addClass('purple');
   }
 
   click ++;
   if (click > 3) {
-    $('.geo-rhom-outer, .geo-par-1, .geo-par-2').removeClass('purple');
-    $('h2').removeClass('purple-text');
+    $('.geo-rhom-outer, .geo-par-1, .geo-par-2, .home--title, .prefooter-container').removeClass('purple');
     click = 0;
   }
 });
@@ -109,36 +105,6 @@ var nameSize = parseInt($('#name').css('font-size'));
   window.addEventListener('scroll', function() {
       requestAnimationFrame(navSizing); //call our parallax function on next available screen paint
   }, false);
-
-
-function open(e){
-  var exitB = $('.exit-button');
-  if (!exitB.is(e.target)){
-    $(e.currentTarget).css('transition', 'all .3s').addClass('work-open');
-    // When this function is used as an event handler: this === e.currentTarget
-  }
-}
-
-
-var work = document.getElementsByClassName('work-col');
-
-for(var i = 0; i < work.length; i++){
-  // console: print the clicked <p> element
-  work[i].addEventListener('click', open, false);
-}
-
-document.body.addEventListener('click', open, false);
-
-
-$(document).mouseup(function (e) {
-  var container = $(".work-col");
-  var exitB = $('.exit-button');
-
-  if (!container.is(e.target) || exitB.is(e.target)) // if the target of the click isn't the container...
-      {
-          $(".work-open").css('transition', 'all .0s').removeClass('work-open');
-      }
-});
 
 
 

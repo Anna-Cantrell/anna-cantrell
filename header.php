@@ -38,15 +38,6 @@
             <p id="tagline">design + develop + experience</p>
           </div>
 
-          <div id="hr" class="nav-hr">
-          </div>
-
-          <ul class="nav-bar">
-            <li><a href="#work-section">Work</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-
         </div>
       </div>
     </section>

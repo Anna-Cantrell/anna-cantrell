@@ -8,12 +8,30 @@
     position: relative;
     flex: 1;
     min-width: 320px;
-    height: 200px;
+    height: 250px;
     overflow: hidden;
+    transition: all .2s;
+    @media (min-width: 900px) {
+      max-width: 50%;
+    }
+    a {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 1;
+    }
     img {
       min-width: 100%;
       min-height: 100%;
       height: auto;
+    }
+    &:hover {
+      transform: translate(-6px, -6px);
+      cursor: pointer;
+      box-shadow: 4px 4px 0px #59e7ff, 8px 8px 0px #fd65bc;
+      z-index: 1;
     }
   }
 }
@@ -39,6 +57,20 @@
   left: 0;
   padding: 4px 4px 4px 10px;
   background: $blue;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  font-weight: 700;
+  color: $background-color;
+  &:after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 20px;
+    background: linear-gradient(to bottom right, $blue 50%, transparent 51%);
+    right: -20px;
+    top: 0px;
+  }
   p {
     margin: 0;
   }
