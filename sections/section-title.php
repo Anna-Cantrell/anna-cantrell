@@ -12,5 +12,18 @@ include('variables.php');
 		<?php if ( get_sub_field('subtitle') ): ?>
 			<h3 class="subtitle"><?php the_sub_field('subtitle') ?></h3>
 		<?php endif; ?>
+		<p class="categories">
+		<?php
+		$posttags = get_the_tags();
+		if ($posttags) {
+			foreach($posttags as $tag) {
+				echo $tag->name . ', ';
+			}
+		}
+		?>
+		<?php
+		the_category(', ');
+		?>
+		</p>
 	</div>
 </section>

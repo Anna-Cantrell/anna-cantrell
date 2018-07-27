@@ -33,6 +33,17 @@ h1 {
     font-size: 60px;
   }
 }
+h2 {
+  font-size: 26px;
+  letter-spacing: .03em;
+  font: {
+    family: $displayFont;
+    weight: 700;
+  }
+  @media (min-width: 768px) {
+    font-size: 40px;
+  }
+}
 h3 {
   font-size: 18px;
   font-weight: 700;

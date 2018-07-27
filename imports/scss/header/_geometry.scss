@@ -182,9 +182,13 @@
       height: $sm-rhom-height;
       width: $sm-rhom-width;
 
+      & .geo-rhom-outer {
+        width: 96%;
+      }
+
       & .geo-rhom-inner {
         height: $sm-rhom-height - 17;
-        width: $sm-rhom-width - 20;
+        width: $sm-rhom-width - 28;
         background: white;
         margin-top: $sm-rhom-border-size - 1;
       }

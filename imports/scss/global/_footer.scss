@@ -1,7 +1,15 @@
 footer.home {
   color: #fff;
   .prefooter-container {
-    background: $hero-background;
+    &.pink {
+      background-color: $pink;
+    }
+    &.blue {
+      background-color: $blue;
+    }
+    &.purple {
+      background-color: $purple;
+    }
   }
 }
 

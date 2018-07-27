@@ -71,6 +71,13 @@ $sections
 			->addTab('Content')
 			->addFields($postGrid)
 			->addFields($section_options)
+		->addLayout('copy_image')
+			->addTab('Content')
+			->addWysiwyg('copy')
+			->addImage('image')
+			->addText('image_caption')
+			->addRadio('image_position', ['choices'=>['left'=>'Left','right'=>'Right']])
+			->addFields($section_options)
 		->addLayout('title')
 			->addTab('Content')
 			->addFields($title)
@@ -113,6 +120,9 @@ $options = new StoutLogic\AcfBuilder\FieldsBuilder('options');
 $options
 		->addImage('wordpress_icon', ['wrapper'=>['width'=>50]])
     ->addImage('react_icon', ['wrapper'=>['width'=>50]])
+		->addRepeater('footer_links')
+			->addText('link_url', ['wrapper'=>['width'=>50]])
+			->addText('link_label', ['wrapper'=>['width'=>50]])
     ->setLocation('options_page', '==', 'acf-options-theme-settings');
 
 add_action('acf/init', function() use ($options) {

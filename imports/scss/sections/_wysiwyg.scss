@@ -17,3 +17,21 @@
     color: $purple;
   }
 }
+.section--wysiwyg {
+  padding: 0 20px;
+}
+.section--wysiwyg .layout--normal {
+  @media (min-width: 1064px) {
+    padding: 0;
+  }
+}
+.section--wysiwyg .layout--wide {
+  @media (min-width: 1660px) {
+    padding: 0;
+  }
+}
+.section--wysiwyg .layout--narrow {
+  @media (min-width: 808px) {
+    padding: 0;
+  }
+}

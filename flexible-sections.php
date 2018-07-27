@@ -16,6 +16,9 @@ if( have_rows('sections') ):
 			case 'title':
 				get_template_part('sections/section', 'title');
 				break;
+			case 'copy_image':
+				get_template_part('sections/section', 'copy-image');
+				break;
 			case 'wysiwyg':
 				get_template_part('sections/section', 'wysiwyg');
 				break;
