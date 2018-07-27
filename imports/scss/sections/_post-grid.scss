@@ -16,6 +16,12 @@
     align-items: center;
     outline: 2px solid $hero-background;
     outline-offset: -1px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat;
+    &.page {
+      outline: 2px solid #fff;
+    }
     @media (min-width: 900px) {
       max-width: 50%;
     }

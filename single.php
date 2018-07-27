@@ -17,6 +17,9 @@ get_header(); ?>
 		<?php while ( have_posts() ) : the_post(); ?>
 			<article>
 				<?php get_template_part('flexible-sections'); ?>
+				<?php if(get_field('include_post_grid')) : ?>
+					<?php get_template_part('sections/section', 'post-grid'); ?>
+				<?php endif; ?>
 			</article>
 		<?php endwhile; ?>
 	</main>

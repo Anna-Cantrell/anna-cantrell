@@ -68,8 +68,6 @@ $sections
 			->addFields($image)
 			->addFields($section_options)
 		->addLayout('post_grid')
-			->addTab('Content')
-			->addFields($postGrid)
 			->addFields($section_options)
 		->addLayout('copy_image')
 			->addTab('Content')
@@ -89,6 +87,7 @@ $sections
 
 $page_options = new FieldsBuilder('page_options');
 $page_options
+	->addTrueFalse('include_post_grid', ['default_value'=>1, 'ui'=>1])
 	->addWysiwyg('teaser',[
 		'instructions' => 'Appears in lists.',
 		'media_upload' => 0
@@ -115,6 +114,14 @@ add_action('acf/init', function() use ($page) {
 //
 // Options Page
 //
+$work = new StoutLogic\AcfBuilder\FieldsBuilder('work');
+$work
+		->addFields($postGrid)
+		->setLocation('options_page', '==', 'acf-options-theme-settings');
+
+add_action('acf/init', function() use ($work) {
+   acf_add_local_field_group($work->build());
+});
 
 $options = new StoutLogic\AcfBuilder\FieldsBuilder('options');
 $options
