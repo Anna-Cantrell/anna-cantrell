@@ -11,6 +11,10 @@
     height: 250px;
     overflow: hidden;
     transition: all .2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: 2px solid $hero-background;
     @media (min-width: 900px) {
       max-width: 50%;
     }
@@ -23,9 +27,7 @@
       z-index: 1;
     }
     img {
-      min-width: 100%;
-      min-height: 100%;
-      height: auto;
+      max-width: none;
     }
     &:hover {
       transform: translate(-6px, -6px);
