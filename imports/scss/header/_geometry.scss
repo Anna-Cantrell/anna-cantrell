@@ -30,16 +30,6 @@
         transform: skew(-48deg);
         margin-top: $rhom-height - 25.2;
 
-        // &.pink {
-        //   background: linear-gradient(120deg, rgba(253,101,188,1), 30%, rgba(253,101,188,0.0));
-        // }
-        // &.blue {
-        //   background: linear-gradient(120deg, rgba(89,231,255,1), 30%, rgba(89,231,255,0.0));
-        // }
-        // &.purple {
-        //   background: linear-gradient(120deg, rgba(225,152,253,1), 30%, rgba(225,152,253,0.0));
-        // }
-
         &:nth-child(2){
           float: right;
           margin-top: $rhom-height - 21;
@@ -56,7 +46,6 @@
       width: $rhom-width;
       vertical-align: middle;
       transform: translateX(0) translateY(0);
-      // transition: all .3s;
 
       & .geo-rhom-outer {
         position: absolute;
@@ -65,16 +54,6 @@
         background: linear-gradient(120deg, rgba(90,90,90,1), 30%, rgba(255,255,255,0.0));
         height: 100%;
         width: 100%;
-
-          // &.pink {
-          //   background: linear-gradient(120deg, rgba(253,101,188,1), 30%, rgba(253,101,188,0.0));
-          // }
-          // &.blue {
-          //   background: linear-gradient(120deg, rgba(89,231,255,1), 30%, rgba(89,231,255,0.0));
-          // }
-          // &.purple {
-          //   background: linear-gradient(120deg, rgba(225,152,253,1), 30%, rgba(225,152,253,0.0));
-          // }
       }
 
       & .geo-rhom-inner {
@@ -89,6 +68,7 @@
     }
   }
 }
+
 
 @media screen and (max-width: 450px) {
   #hero {
@@ -192,6 +172,72 @@
         background: white;
         margin-top: $sm-rhom-border-size - 1;
       }
+    }
+  }
+}
+//////
+// Theme 2
+//////
+
+body#theme2 {
+  #hero {
+
+    & .geometry-container {
+      & .par-container {
+        & .geo-par-1, .geo-par-2 {
+          background-color: transparent;
+          border: 1px solid $pink-t2;
+          opacity: .6;
+        }
+      }
+
+      & .rhom-container {
+
+        & .geo-rhom-outer {
+          background: transparent;
+          border: 1px solid $pink-t2;
+          opacity: .6;
+        }
+
+        & .geo-rhom-inner {
+          background: $beige-t2;
+          &:before {
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            border: 1px solid $pink-t2;
+            opacity: .6;
+          }
+        }
+      }
+    }
+  }
+
+  .geo-rhom-outer, .geo-par-1, .geo-par-2 {
+    &.pink {
+      background: linear-gradient(120deg, $pink-t2, 30%, $pink-t2-0) !important;
+      transition: all .3s;
+      border: 1px solid $pink-t2 !important;
+      + .geo-rhom-inner:before {border-color: $pink-t2 !important}
+    }
+  }
+  .geo-rhom-outer, .geo-par-1, .geo-par-2 {
+    &.blue {
+      background: linear-gradient(120deg, $blue-t2, 30%, $blue-t2-0) !important;
+      transition: all .3s;
+      border: 1px solid $blue-t2 !important;
+      + .geo-rhom-inner:before {border-color: $blue-t2 !important}
+    }
+  }
+  .geo-rhom-outer, .geo-par-1, .geo-par-2 {
+    &.purple {
+      background: linear-gradient(120deg, $green-t2, 30%, $green-t2-0) !important;
+      transition: all .3s;
+      border: 1px solid $green-t2 !important;
+      + .geo-rhom-inner:before {border-color: $green-t2 !important}
     }
   }
 }

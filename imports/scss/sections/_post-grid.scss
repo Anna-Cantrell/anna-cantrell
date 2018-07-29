@@ -33,14 +33,10 @@
       width: 100%;
       z-index: 1;
     }
-    img {
-      max-width: none;
-      min-height: 100%;
-      object-fit: contain;
-    }
     &:hover {
       transform: translate(-6px, -6px);
       cursor: pointer;
+      outline: 2px solid transparent;
       box-shadow: 4px 4px 0px #59e7ff, 8px 8px 0px #fd65bc;
       z-index: 1;
     }
@@ -84,5 +80,25 @@
   }
   p {
     margin: 0;
+  }
+}
+
+body#theme2 {
+  .section--grid {
+    .post-grid__single {
+      outline: 2px solid $beige-t2;
+      &:hover {
+        outline: 2px solid transparent;
+        box-shadow: 4px 4px 0px $blue-t2, 8px 8px 0px $pink-t2;
+        z-index: 1;
+      }
+    }
+  }
+  .tag-container {
+    background: $pink-t2;
+    color: $background-color;
+    &:after {
+      background: linear-gradient(to bottom right, $pink-t2 50%, transparent 51%);
+    }
   }
 }

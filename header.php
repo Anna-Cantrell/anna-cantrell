@@ -26,7 +26,13 @@
 	endif;
 ?>
 
-<body <?php body_class(); ?> class="<?php echo $headerClass ?>">
+<body id="" <?php body_class(); ?> class="<?php echo $headerClass; ?>">
+	<div class="<?php echo $headerClass . " theme-buttons"; ?>">
+		<ul>
+			<li class="dark"></li>
+			<li class="retro"></li>
+		</ul>
+	</div>
 
 
 	<section id="header" class="<?php echo $headerClass ?>">
