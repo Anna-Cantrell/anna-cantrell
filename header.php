@@ -27,6 +27,7 @@
 ?>
 
 <body id="" <?php body_class(); ?> class="<?php echo $headerClass; ?>">
+	<div class="hidden-title"></div>
 	<div class="<?php echo $headerClass . " theme-buttons"; ?>">
 		<ul>
 			<li class="dark"></li>

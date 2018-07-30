@@ -193,3 +193,13 @@ body#theme2 {
     }
   }
 }
+.hidden-title {
+  position: fixed;
+  background-image: url('media/anna-cantrell.png');
+  height: 50px;
+  width: 100%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: -50px;
+}

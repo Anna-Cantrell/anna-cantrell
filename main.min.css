@@ -90,6 +90,7 @@ body#theme2 .title-container{color:#90d2d8;font-size:10px}
 body#theme2 .title-container h1{color:#90d2d8;text-shadow:none;font-style:normal;font-weight:900;text-transform:uppercase}
 #about h2,#about p{color:#e6e6e6}
 #about h2,#contact h2{font-family:"playfair display",serif;font-style:italic}
+.hidden-title{position:fixed;background-image:url(media/anna-cantrell.png);height:50px;width:100%;background-size:contain;background-position:center;background-repeat:no-repeat;margin-top:-50px}
 #hero{height:100vh;min-height:500px;max-height:650px;padding-top:1px}
 #hero .geometry-container .par-container{position:absolute;width:50vw;height:30.46458vw;margin-top:100px}
 #hero .geometry-container .par-container .geo-par-1,#hero .geometry-container .par-container .geo-par-2{height:5.30188vw;width:14.77105vw;background-color:rgba(200,200,200,.3);transform:skew(-48deg);margin-top:5.26458vw}
