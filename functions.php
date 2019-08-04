@@ -114,7 +114,3 @@ if( function_exists('acf_add_options_page') ) {
 	));
 
 }
-
-// Include fields
-require_once('vendor/autoload.php');
-require_once('fields.php');

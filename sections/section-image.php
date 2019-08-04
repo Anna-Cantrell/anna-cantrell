@@ -6,7 +6,7 @@ include('variables.php');
 	<div class="layout layout--<?php echo $layout; ?>">
 		<?php if ( get_sub_field('image') ): ?>
 			<?php $image = get_sub_field('image'); ?>
-			<img src="<?php echo $image['url']; ?>" alt="" />
+			<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 		<?php endif; ?>
 	</div>
 </section>
